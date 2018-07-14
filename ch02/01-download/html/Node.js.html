@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>Node.js - Wikipedia</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Node.js","wgTitle":"Node.js","wgCurRevisionId":67597085,"wgRevisionId":67597085,"wgArticleId":2217415,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["JavaScript","ウェブ開発","オープンソースソフトウェア"],"wgBreakFrames":false,"wgPageContentLanguage":"ja","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"ja","wgMonthNames":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgMonthNamesShort":["","1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"wgRelevantPageName":"Node.js","wgRelevantArticleId":2217415,"wgRequestId":"Wzr38ApAAEQAAB-kbGsAAABG","wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgWikiEditorEnabledModules":[],"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgPopupsShouldSendModuleToUser":true,"wgPopupsConflictsWithNavPopupGadget":false,"wgVisualEditor":{"pageLanguageCode":"ja","pageLanguageDir":"ltr","pageVariantFallbacks":"ja","usePageImages":true,"usePageDescriptions":true},"wgPreferredVariant":"ja","wgMFExpandAllSectionsUserOption":true,"wgMFEnableFontChanger":true,"wgMFDisplayWikibaseDescriptions":{"search":true,"nearby":true,"watchlist":true,"tagline":true},"wgRelatedArticles":null,"wgRelatedArticlesUseCirrusSearch":true,"wgRelatedArticlesOnlyUseCirrusSearch":false,"wgULSCurrentAutonym":"日本語","wgNoticeProject":"wikipedia","wgCentralNoticeCookiesToDelete":[],"wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgWikibaseItemId":"Q756100","wgScoreNoteLanguages":{"arabic":"العربية","catalan":"català","deutsch":"Deutsch","english":"English","espanol":"español","italiano":"italiano","nederlands":"Nederlands","norsk":"norsk","portugues":"português","suomi":"suomi","svenska":"svenska","vlaams":"West-Vlams"},"wgScoreDefaultNoteLanguage":"nederlands","wgCentralAuthMobileDomain":false,"wgCodeMirrorEnabled":true,"wgVisualEditorToolbarScrollOffset":0,"wgVisualEditorUnsupportedEditParams":["undo","undoafter","veswitched"],"wgEditSubmitButtonLabelPublish":true});mw.loader.state({"ext.globalCssJs.user.styles":"ready","ext.globalCssJs.site.styles":"ready","site.styles":"ready","noscript":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","ext.globalCssJs.site":"ready","user":"ready","user.options":"loading","user.tokens":"loading","ext.math.styles":"ready","ext.cite.styles":"ready","ext.pygments":"ready","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","wikibase.client.init":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","ext.wikimediaBadges":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"});mw.loader.implement("user.options@1smlfrf",function($,jQuery,require,module){/*@nomin*/mw.user.options.set({"variant":"ja"});
+});mw.loader.implement("user.tokens@1dqfd7l",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});mw.loader.load(["ext.math.scripts","ext.cite.a11y","site","mediawiki.page.startup","mediawiki.user","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","ext.gadget.ReferenceTooltips","ext.gadget.suppressEnterAtSummaryBox","ext.gadget.checkSignature","ext.gadget.WikiMiniAtlas","ext.gadget.switcher","ext.centralauth.centralautologin","mmv.head","mmv.bootstrap.autostart","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.visualEditor.targetLoader","ext.eventLogging.subscriber","ext.wikimediaEvents","ext.navigationTiming","ext.uls.eventlogger","ext.uls.init","ext.uls.compactlinks","ext.uls.interface","ext.3d","ext.centralNotice.geoIP","ext.centralNotice.startUp","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=ja&amp;modules=ext.cite.styles%7Cext.math.styles%7Cext.pygments%2CwikimediaBadges%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cmediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface%7Cskins.vector.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector"/>
+<script async="" src="/w/load.php?debug=false&amp;lang=ja&amp;modules=startup&amp;only=scripts&amp;skin=vector"></script>
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+<link rel="stylesheet" href="/w/load.php?debug=false&amp;lang=ja&amp;modules=site.styles&amp;only=styles&amp;skin=vector"/>
+<meta name="generator" content="MediaWiki 1.32.0-wmf.10"/>
+<meta name="referrer" content="origin"/>
+<meta name="referrer" content="origin-when-crossorigin"/>
+<meta name="referrer" content="origin-when-cross-origin"/>
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"/>
+<link rel="alternate" href="android-app://org.wikipedia/http/ja.m.wikipedia.org/wiki/Node.js"/>
+<link rel="alternate" type="application/x-wiki" title="編集" href="/w/index.php?title=Node.js&amp;action=edit"/>
+<link rel="edit" title="編集" href="/w/index.php?title=Node.js&amp;action=edit"/>
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png"/>
+<link rel="shortcut icon" href="/static/favicon/wikipedia.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (ja)"/>
+<link rel="EditURI" type="application/rsd+xml" href="//ja.wikipedia.org/w/api.php?action=rsd"/>
+<link rel="license" href="//creativecommons.org/licenses/by-sa/3.0/"/>
+<link rel="canonical" href="https://ja.wikipedia.org/wiki/Node.js"/>
+<link rel="dns-prefetch" href="//login.wikimedia.org"/>
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<!--[if lt IE 9]><script src="/w/load.php?debug=false&amp;lang=ja&amp;modules=html5shiv&amp;only=scripts&amp;skin=vector&amp;sync=1"></script><![endif]-->
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Node_js rootpage-Node_js skin-vector action-view">		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+			<div id="siteNotice" class="mw-body-content"><!-- CentralNotice --></div><div class="mw-indicators mw-body-content">
+</div>
+<h1 id="firstHeading" class="firstHeading" lang="ja">Node.js</h1>			<div id="bodyContent" class="mw-body-content">
+				<div id="siteSub" class="noprint">出典: フリー百科事典『ウィキペディア（Wikipedia）』</div>				<div id="contentSub"></div>
+				<div id="jump-to-nav"></div>				<a class="mw-jump-link" href="#mw-head">Jump to navigation</a>
+				<a class="mw-jump-link" href="#p-search">Jump to search</a>
+				<div id="mw-content-text" lang="ja" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><table class="infobox vevent" style="width:22em;">
+<caption itemprop="name" class="summary nowrap" style="">Node.js</caption>
+<tr class="" style="" itemprop="">
+<td colspan="2" class="" style="text-align:center;" itemprop=""><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Node.js_logo.svg" class="image" title="Node.js"><img alt="Node.js" src="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/180px-Node.js_logo.svg.png" width="180" height="110" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/270px-Node.js_logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/360px-Node.js_logo.svg.png 2x" data-file-width="590" data-file-height="361" /></a></td>
+</tr>
+<tr class="" style="" itemprop="">
+<th scope="row" style="text-align:left; white-space:nowrap;"><a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E8%A8%AD%E8%A8%88" title="ソフトウェア設計">作者</a></th>
+<td class="" style="" itemprop="">ライアン・ダール</td>
+</tr>
+<tr class="" style="" itemprop="">
+<th scope="row" style="text-align:left; white-space:nowrap;"><a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E9%96%8B%E7%99%BA%E8%80%85" title="ソフトウェア開発者">開発元</a></th>
+<td class="" style="" itemprop=""><a rel="nofollow" class="external text" href="https://github.com/ry/node/blob/master/AUTHORS">Node.js Developers</a></td>
+</tr>
+<tr class="" style="" itemprop="">
+<th scope="row" style="text-align:left; white-space:nowrap;">初版</th>
+<td class="" style="" itemprop="">2009年<span class="noprint">（9年前）</span><span style="display:none">&#160;（<span class="bday dtstart published updated">2009</span>）</span></td>
+</tr>
+<tr class="" style="" itemprop="">
+<th scope="row" style="text-align:left; white-space:nowrap;">最新版</th>
+<td class="" style="" itemprop="">
+<dl>
+<dt>LTS</dt>
+</dl>
+<p>8.11.1 <small>- 2018年3月29日<span class="noprint">（3か月前）</span><span style="display:none">&#160;（<span class="bday dtstart published updated">2018-03-29</span>）</span> <sup id="cite_ref-1" class="reference"><a href="#cite_note-1">[1]</a></sup></small></p>
+<dl>
+<dt>Current</dt>
+</dl>
+10.0.0 <small>- 2018年4月24日<span class="noprint">（2か月前）</span><span style="display:none">&#160;（<span class="bday dtstart published updated">2018-04-24</span>）</span> <sup id="cite_ref-2" class="reference"><a href="#cite_note-2">[2]</a></sup></small><small class="plainlinks"><a class="external text" href="//ja.wikipedia.org/w/index.php?title=Template:Latest_stable_software_release/Node.js&amp;action=edit">[±]</a></small></td>
+</tr>
+<tr class="" style="" itemprop="">
+<th scope="row" style="text-align:left; white-space:nowrap;"><a href="/wiki/%E3%83%AA%E3%83%9D%E3%82%B8%E3%83%88%E3%83%AA" title="リポジトリ">リポジトリ</a></th>
+<td class="" style="" itemprop=""><span class="url"><a rel="nofollow" class="external text" href="https://github.com/nodejs/node">github<wbr />.com<wbr />/nodejs<wbr />/node</a></span></td>
+</tr>
+<tr class="" style="" itemprop="">
+<th scope="row" style="text-align:left; white-space:nowrap;">プログラミング言語</th>
+<td class="" style="" itemprop=""><a href="/wiki/C%2B%2B" title="C++">C++</a>, <a href="/wiki/JavaScript" title="JavaScript">JavaScript</a></td>
+</tr>
+<tr class="" style="" itemprop="">
+<th scope="row" style="text-align:left; white-space:nowrap;"><a href="/wiki/%E3%82%AA%E3%83%9A%E3%83%AC%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="オペレーティングシステム">対応OS</a></th>
+<td class="" style="" itemprop=""><a href="/wiki/MacOS" title="MacOS">macOS</a>, <a href="/wiki/Linux" title="Linux">Linux</a>, <a href="/wiki/Solaris" title="Solaris">Solaris</a>, <a href="/wiki/FreeBSD" title="FreeBSD">FreeBSD</a>, <a href="/wiki/OpenBSD" title="OpenBSD">OpenBSD</a>, <a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a>, <a href="/wiki/WebOS" title="WebOS">webOS</a></td>
+</tr>
+<tr class="" style="" itemprop="">
+<th scope="row" style="text-align:left; white-space:nowrap;"><a href="/wiki/%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)" title="プラットフォーム (コンピューティング)">プラットフォーム</a></th>
+<td class="" style="" itemprop=""><a href="/wiki/X86" title="X86">x86</a>, <a href="/wiki/X64" title="X64">x64</a>, <a href="/wiki/ARM%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%81%E3%83%A3" title="ARMアーキテクチャ">ARM</a>, <a href="/wiki/Power_Architecture" title="Power Architecture">Power</a>, <a href="/wiki/Z/Architecture" title="Z/Architecture">z/Architecture</a></td>
+</tr>
+<tr class="" style="" itemprop="">
+<th scope="row" style="text-align:left; white-space:nowrap;">種別</th>
+<td class="" style="" itemprop=""><a href="/wiki/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E9%A7%86%E5%8B%95%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="イベント駆動型プログラミング">イベント駆動型</a></td>
+</tr>
+<tr class="" style="" itemprop="">
+<th scope="row" style="text-align:left; white-space:nowrap;"><a href="/wiki/%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9" title="ライセンス">ライセンス</a></th>
+<td class="" style="" itemprop=""><a href="/wiki/MIT_License" title="MIT License">MIT License</a></td>
+</tr>
+<tr class="" style="" itemprop="">
+<th scope="row" style="text-align:left; white-space:nowrap;">公式サイト</th>
+<td class="" style="" itemprop=""><a rel="nofollow" class="external text" href="https://nodejs.org/">nodejs.org</a></td>
+</tr>
+<tr class="noprint">
+<td colspan="2" style="text-align:right; font-size:85%;"><a href="/wiki/Template:Infobox_Software" title="Template:Infobox Software">テンプレートを表示</a></td>
+</tr>
+</table>
+<p><b>Node.js</b> は、<a href="/wiki/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E9%A7%86%E5%8B%95%E5%9E%8B%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0" title="イベント駆動型プログラミング">イベント化</a>された<a href="/wiki/%E5%85%A5%E5%87%BA%E5%8A%9B" title="入出力">入出力</a>を扱う<a href="/wiki/Unix%E7%B3%BB" title="Unix系">Unix系</a><a href="/wiki/%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)" title="プラットフォーム (コンピューティング)">プラットフォーム</a>上の<a href="/wiki/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%82%B5%E3%82%A4%E3%83%89%E3%83%BB%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88" title="サーバーサイド・スクリプト">サーバーサイドJavaScript</a>環境である。<a href="/wiki/Web%E3%82%B5%E3%83%BC%E3%83%90" title="Webサーバ">Webサーバ</a>などの<a href="/wiki/%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%A9%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3" title="スケーラビリティ">スケーラブル</a>な<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF" title="コンピュータネットワーク">ネットワーク</a><a href="/wiki/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="プログラム (コンピュータ)">プログラム</a>の記述を意図している<sup id="cite_ref-3" class="reference"><a href="#cite_note-3">[3]</a></sup>。ライアン・ダールによって<a href="/wiki/2009%E5%B9%B4" title="2009年">2009年</a>に作成され、ダールを雇用している<a href="/wiki/Joyent" title="Joyent">Joyent</a>の支援により成長している<sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup> <sup id="cite_ref-Node.js_pushes_JavaScript_to_the_server-side_5-0" class="reference"><a href="#cite_note-Node.js_pushes_JavaScript_to_the_server-side-5">[5]</a></sup>。</p>
+<p></p>
+<div id="toc" class="toc">
+<div class="toctitle" lang="ja" dir="ltr">
+<h2>目次</h2>
+</div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#概要"><span class="tocnumber">1</span> <span class="toctext">概要</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#例"><span class="tocnumber">2</span> <span class="toctext">例</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#モジュール"><span class="tocnumber">3</span> <span class="toctext">モジュール</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#コミュニティ"><span class="tocnumber">4</span> <span class="toctext">コミュニティ</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Windows版"><span class="tocnumber">5</span> <span class="toctext">Windows版</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#クライアント1万台問題"><span class="tocnumber">6</span> <span class="toctext">クライアント1万台問題</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#脚注・出典"><span class="tocnumber">7</span> <span class="toctext">脚注・出典</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#関連項目"><span class="tocnumber">8</span> <span class="toctext">関連項目</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#外部リンク"><span class="tocnumber">9</span> <span class="toctext">外部リンク</span></a></li>
+</ul>
+</div>
+<p></p>
+<h2><span id=".E6.A6.82.E8.A6.81"></span><span class="mw-headline" id="概要">概要</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Node.js&amp;action=edit&amp;section=1" title="節を編集: 概要">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p><a href="/wiki/Google_V8_JavaScript_Engine" title="Google V8 JavaScript Engine">V8 JavaScriptエンジン</a>で動作するが、<a href="/wiki/Chakra#ChakraCore" title="Chakra">ChakraCore</a>バージョンやMozillaによるSpiderMonkey移植のプロジェクトも存在する。</p>
+<p>Node.jsは<a href="/wiki/Python" title="Python">Python</a>の<a href="/wiki/Twisted" title="Twisted">Twisted</a>、<a href="/wiki/Perl" title="Perl">Perl</a>の<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="/w/index.php?title=Perl_Object_Environment&amp;action=edit&amp;redlink=1" class="new" title="Perl Object Environment (存在しないページ)">Perl Object Environment</a><span style="font-size: 0.77em; font-weight: normal;" class="noprint">（<a href="https://en.wikipedia.org/wiki/Perl_Object_Environment" class="extiw" title="en:Perl Object Environment">英語版</a>）</span></span>、<a href="/wiki/C%E8%A8%80%E8%AA%9E" title="C言語">C言語</a>の<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="/w/index.php?title=Libevent&amp;action=edit&amp;redlink=1" class="new" title="Libevent (存在しないページ)">libevent</a><span style="font-size: 0.77em; font-weight: normal;" class="noprint">（<a href="https://en.wikipedia.org/wiki/libevent" class="extiw" title="en:libevent">英語版</a>）</span></span>、<a href="/wiki/Ruby" title="Ruby">Ruby</a>の<a href="/w/index.php?title=EventMachine&amp;action=edit&amp;redlink=1" class="new" title="EventMachine (存在しないページ)">EventMachine</a>と同様の目的を持つ。 ほとんどの<a href="/wiki/JavaScript" title="JavaScript">JavaScript</a>とは異なり、<a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E3%83%96%E3%83%A9%E3%82%A6%E3%82%B6" title="ウェブブラウザ">ウェブブラウザ</a>の中で実行されるのではなく、むしろサーバサイドJavaScriptの一種である。 Node.jsはいくつかの<a href="/wiki/CommonJS" title="CommonJS">CommonJS</a>仕様を実装している<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup>。 Node.jsは対話的なテスト用にREPL (Read-eval-print loop) 環境を含んでいる。</p>
+<p>Node.jsを用いた構成としては<a href="/wiki/MEAN_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB)" title="MEAN (ソフトウェアバンドル)">MEAN</a>等が提唱されている。</p>
+<h2><span id=".E4.BE.8B"></span><span class="mw-headline" id="例">例</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Node.js&amp;action=edit&amp;section=2" title="節を編集: 例">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Node.jsによる<a href="/wiki/Web%E3%82%B5%E3%83%BC%E3%83%90" title="Webサーバ">HTTPサーバ</a>版の<a href="/wiki/Hello_world" title="Hello world">Hello world</a>:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="kr">const</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'http'</span><span class="p">);</span>
+
+<span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">response</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span><span class="s1">'Content-Type'</span><span class="o">:</span> <span class="s1">'text/plain'</span><span class="p">});</span>
+    <span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s1">'Hello World\n'</span><span class="p">);</span>
+<span class="p">}).</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'Server running at http://127.0.0.1:3000/'</span><span class="p">);</span>
+</pre></div>
+<p><a href="/wiki/%E3%83%9D%E3%83%BC%E3%83%88%E7%95%AA%E5%8F%B7" title="ポート番号">ポート番号</a> 3000番で接続を待ち受けて、送信されたデータを<a href="/wiki/%E3%82%A8%E3%82%B3%E3%83%BC_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="エコー (コンピュータ)">エコー</a>する単純な<a href="/wiki/Transmission_Control_Protocol" title="Transmission Control Protocol">TCP</a>サーバ:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="kr">const</span> <span class="nx">net</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'net'</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">net</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">stream</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">stream</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">'hello\r\n'</span><span class="p">);</span>
+
+    <span class="nx">stream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'data'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">stream</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="nx">stream</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'end'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">stream</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s1">'goodbye\r\n'</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="s1">'localhost'</span><span class="p">);</span>
+</pre></div>
+<h2><span id=".E3.83.A2.E3.82.B8.E3.83.A5.E3.83.BC.E3.83.AB"></span><span class="mw-headline" id="モジュール">モジュール</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Node.js&amp;action=edit&amp;section=3" title="節を編集: モジュール">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>Node.jsは、<a href="/wiki/%E3%83%90%E3%82%A4%E3%83%8A%E3%83%AA" title="バイナリ">バイナリ</a>に<a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="コンパイラ">コンパイル</a>された多くの「コア・モジュール」とともに提供される。それはネットワークの非同期ラッパーであるnetモジュールの他、パスや<a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="ファイルシステム">ファイルシステム</a>、<a href="/wiki/%E3%83%90%E3%83%83%E3%83%95%E3%82%A1" title="バッファ">バッファ</a>、<a href="/wiki/%E3%82%BF%E3%82%A4%E3%83%9E%E3%83%BC" title="タイマー">タイマー</a>、より一般的な<a href="/wiki/%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%A0_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0)" title="ストリーム (プログラミング)">ストリーム</a>などの基本的な<a href="/wiki/%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB" title="モジュール">モジュール</a>を含む。<a href="/wiki/%E3%82%B5%E3%83%BC%E3%83%89%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%83%BC" title="サードパーティー">サードパーティー</a>製のモジュールを使用することも可能である。それはプリコンパイルされた ".node" <a href="/wiki/%E6%A9%9F%E8%83%BD%E6%8B%A1%E5%BC%B5" title="機能拡張">アドオン</a>、または、プレーンなJavaScript<a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB_(%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF)" title="ファイル (コンピュータ)">ファイル</a>のどちらの形式でもよい。JavaScriptモジュールは<a href="/wiki/CommonJS" title="CommonJS">CommonJS</a>モジュール仕様<sup id="cite_ref-7" class="reference"><a href="#cite_note-7">[7]</a></sup>に従って実装され、モジュールが実装する関数や変数へのアクセスにはexports変数が使われる<sup id="cite_ref-8" class="reference"><a href="#cite_note-8">[8]</a></sup>。</p>
+<p>サードパーティーのモジュールはNode.jsを拡張または抽象レベルを提供することで、<a href="/wiki/%E3%82%A6%E3%82%A7%E3%83%96%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3" title="ウェブアプリケーション">ウェブアプリケーション</a>で使われる様々な<a href="/wiki/%E3%83%9F%E3%83%89%E3%83%AB%E3%82%A6%E3%82%A7%E3%82%A2" title="ミドルウェア">ミドルウェア</a>実装することができる。たとえばポピュラーな<a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF" title="ソフトウェアフレームワーク">フレームワーク</a>としてconnectおよび<a href="/wiki/Express.js" title="Express.js">Express.js</a>がある。モジュールは単なるファイルとしてインストールすることもできるが、通常は<a href="/wiki/Npm_(%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E7%AE%A1%E7%90%86%E3%83%84%E3%83%BC%E3%83%AB)" title="Npm (パッケージ管理ツール)">npm</a>を使ってインストールされる。それは依存性の扱いも含めてモジュールの構築、インストール、更新を助けてくれる。さらに、モジュールはNodeのデフォルトであるモジュール用<a href="/wiki/%E3%83%87%E3%82%A3%E3%83%AC%E3%82%AF%E3%83%88%E3%83%AA" title="ディレクトリ">ディレクトリ</a>にインストールしなくても、相対的なパス名を要求することで見つけられる。<a rel="nofollow" class="external text" href="https://github.com/joyent/node/wiki/modules">Node.js wiki</a>に利用可能なサードパーティー製のモジュール一覧がある。</p>
+<p>Node.jsを用いたWebアプリケーションでは、<a href="/wiki/Express.js" title="Express.js">Express.js</a>や<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="/w/index.php?title=Ember.js&amp;action=edit&amp;redlink=1" class="new" title="Ember.js (存在しないページ)">Ember.js</a><span style="font-size: 0.77em; font-weight: normal;" class="noprint">（<a href="https://en.wikipedia.org/wiki/Ember.js" class="extiw" title="en:Ember.js">英語版</a>）</span></span>、<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="/w/index.php?title=Matador&amp;action=edit&amp;redlink=1" class="new" title="Matador (存在しないページ)">Matador</a><span style="font-size: 0.77em; font-weight: normal;" class="noprint">（<a href="https://en.wikipedia.org/wiki/Meteor_(web_framework)" class="extiw" title="en:Meteor (web framework)">英語版</a>）</span></span>のようなフレームワークを用いて開発を行うことが多い。</p>
+<h2><span id=".E3.82.B3.E3.83.9F.E3.83.A5.E3.83.8B.E3.83.86.E3.82.A3"></span><span class="mw-headline" id="コミュニティ">コミュニティ</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Node.js&amp;action=edit&amp;section=4" title="節を編集: コミュニティ">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>主に2つのメーリングリスト <a rel="nofollow" class="external text" href="http://groups.google.com/group/nodejs">nodejs</a> と <a rel="nofollow" class="external text" href="http://groups.google.com/group/nodejs-dev">nodejs-dev</a> 、そして <a href="/wiki/Freenode" title="Freenode">freenode</a>上の <a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%83%BB%E3%83%AA%E3%83%AC%E3%83%BC%E3%83%BB%E3%83%81%E3%83%A3%E3%83%83%E3%83%88" class="mw-redirect" title="インターネット・リレー・チャット">IRC</a> チャンネル #node.js を中心とするとても活発な開発者コミュニティが存在する。コミュニティはNode.jsにフォーカスした開発者会議であるNodeConfに集結する<sup id="cite_ref-9" class="reference"><a href="#cite_note-9">[9]</a></sup>。</p>
+<h2><span id="Windows.E7.89.88"></span><span class="mw-headline" id="Windows版">Windows版</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Node.js&amp;action=edit&amp;section=5" title="節を編集: Windows版">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>0.5.1より、<a href="/wiki/Microsoft_Windows" title="Microsoft Windows">Windows</a>ネイティブ版バイナリをリリースをした<sup id="cite_ref-10" class="reference"><a href="#cite_note-10">[10]</a></sup>。Windowsネイティブ版リリースに関しては<a href="/wiki/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%BD%E3%83%95%E3%83%88" title="マイクロソフト">マイクロソフト</a>の支援が行われた。Windows向けの非同期I/O環境（<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="/w/index.php?title=Input/output_completion_port&amp;action=edit&amp;redlink=1" class="new" title="Input/output completion port (存在しないページ)">Input/output completion port</a><span style="font-size: 0.77em; font-weight: normal;" class="noprint">（<a href="https://en.wikipedia.org/wiki/Input/output_completion_port" class="extiw" title="en:Input/output completion port">英語版</a>）</span></span>、以下IOCP）に対応するため、libuv<sup id="cite_ref-11" class="reference"><a href="#cite_note-11">[11]</a></sup>を作成することにより抽象化を進めた。結果としてlibev、libeioが使えるUnix系プラットフォームとIOCPを利用するWindowsプラットフォーム向けのリリースが可能になった。</p>
+<h2><span id=".E3.82.AF.E3.83.A9.E3.82.A4.E3.82.A2.E3.83.B3.E3.83.881.E4.B8.87.E5.8F.B0.E5.95.8F.E9.A1.8C"></span><span class="mw-headline" id="クライアント1万台問題">クライアント1万台問題</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Node.js&amp;action=edit&amp;section=6" title="節を編集: クライアント1万台問題">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>非同期処理のNode.jsでは<span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="/w/index.php?title=%E3%82%AF%E3%83%A9%E3%82%A4%E3%82%A2%E3%83%B3%E3%83%881%E4%B8%87%E5%8F%B0%E5%95%8F%E9%A1%8C&amp;action=edit&amp;redlink=1" class="new" title="クライアント1万台問題 (存在しないページ)">クライアント1万台問題</a><span style="font-size: 0.77em; font-weight: normal;" class="noprint">（<a href="https://en.wikipedia.org/wiki/C10k_problem" class="extiw" title="en:C10k problem">英語版</a>）</span></span>は起きない<sup id="cite_ref-12" class="reference"><a href="#cite_note-12">[12]</a></sup>。</p>
+<p>Node.jsでこの問題を解決した技術の中核は、シングルスレッドにおける非同期処理を容易に実装可能にしたイベント駆動型プログラミング環境である。</p>
+<h2><span id=".E8.84.9A.E6.B3.A8.E3.83.BB.E5.87.BA.E5.85.B8"></span><span class="mw-headline" id="脚注・出典">脚注・出典</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Node.js&amp;action=edit&amp;section=7" title="節を編集: 脚注・出典">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<div class="reflist" style="-moz-column-count:2; -webkit-column-count:2; column-count:2; -moz-column-width: 20em; -webkit-column-width: 20em; column-width: 20em; list-style-type: decimal;">
+<ol class="references">
+<li id="cite_note-1"><b><a href="#cite_ref-1">^</a></b> <span class="reference-text"><cite style="font-style:normal">“<a rel="nofollow" class="external text" href="https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V8.md">Node.js 8 ChangeLog</a>”. <span title="">2017年4月30日</span>閲覧。</cite></span></li>
+<li id="cite_note-2"><b><a href="#cite_ref-2">^</a></b> <span class="reference-text"><cite style="font-style:normal">“<a rel="nofollow" class="external text" href="https://github.com/nodejs/node/blob/master/doc/changelogs/CHANGELOG_V10.md">Node.js 10 ChangeLog</a>”. <span title="">2017年4月30日</span>閲覧。</cite></span></li>
+<li id="cite_note-3"><b><a href="#cite_ref-3">^</a></b> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.readwriteweb.com/hack/2011/01/wait-whats-nodejs-good-for-aga.php">http://www.readwriteweb.com/hack/2011/01/wait-whats-nodejs-good-for-aga.php</a></span></li>
+<li id="cite_note-4"><b><a href="#cite_ref-4">^</a></b> <span class="reference-text"><a rel="nofollow" class="external free" href="http://mashable.com/2011/03/10/node-js/">http://mashable.com/2011/03/10/node-js/</a></span></li>
+<li id="cite_note-Node.js_pushes_JavaScript_to_the_server-side-5"><b><a href="#cite_ref-Node.js_pushes_JavaScript_to_the_server-side_5-0">^</a></b> <span class="reference-text"><cite style="font-style:normal">Alex Handy (<span title="">2011年6月24日</span>). “<a rel="nofollow" class="external text" href="http://www.sdtimes.com/NODE_JS_PUSHES_JAVASCRIPT_TO_THE_SERVER_SIDE/By_Alex_Handy/About_JAVASCRIPT_and_NODEJS/35668">Node.js pushes JavaScript to the server-side</a>”.  SDTimes. <span title="">2011年6月24日</span>閲覧。</cite></span></li>
+<li id="cite_note-6"><b><a href="#cite_ref-6">^</a></b> <span class="reference-text"><a rel="nofollow" class="external free" href="http://wiki.commonjs.org/wiki/Implementations/node.js">http://wiki.commonjs.org/wiki/Implementations/node.js</a></span></li>
+<li id="cite_note-7"><b><a href="#cite_ref-7">^</a></b> <span class="reference-text"><cite style="font-style:normal">“<a rel="nofollow" class="external text" href="http://www.commonjs.org/impl/">CommonJS Implementations</a>”. <span title="15 May 2011">2011年5月15日</span>閲覧。</cite></span></li>
+<li id="cite_note-8"><b><a href="#cite_ref-8">^</a></b> <span class="reference-text"><cite style="font-style:normal">Ryswyck, Jan. “<a rel="nofollow" class="external text" href="http://elegantcode.com/2011/02/04/taking-baby-steps-with-node-js-commonjs-and-creating-custom-modules/">Taking Baby Steps with Node.js – CommonJS and Creating Custom Modules</a>”. <span title="15 May 2011">2011年5月15日</span>閲覧。</cite></span></li>
+<li id="cite_note-9"><b><a href="#cite_ref-9">^</a></b> <span class="reference-text"><a rel="nofollow" class="external free" href="http://www.readwriteweb.com/hack/2011/04/nodeconf-schedule-announced.php">http://www.readwriteweb.com/hack/2011/04/nodeconf-schedule-announced.php</a></span></li>
+<li id="cite_note-10"><b><a href="#cite_ref-10">^</a></b> <span class="reference-text"><a rel="nofollow" class="external free" href="http://blog.nodejs.org/2011/07/14/node-v0-5-1/">http://blog.nodejs.org/2011/07/14/node-v0-5-1/</a></span></li>
+<li id="cite_note-11"><b><a href="#cite_ref-11">^</a></b> <span class="reference-text"><a rel="nofollow" class="external free" href="https://github.com/joyent/libuv">https://github.com/joyent/libuv</a></span></li>
+<li id="cite_note-12"><b><a href="#cite_ref-12">^</a></b> <span class="reference-text"><cite style="font-style:normal">福田崇男 (<span title="">2012年7月31日</span>). “<a rel="nofollow" class="external text" href="http://itpro.nikkeibp.co.jp/article/COLUMN/20120725/411441/">スタバ方式で「C10K問題」を解消</a>”. <i>日経コンピュータ</i>.  日経BP社. <span title="">2017年2月20日</span>閲覧。</cite></span></li>
+</ol>
+</div>
+<h2><span id=".E9.96.A2.E9.80.A3.E9.A0.85.E7.9B.AE"></span><span class="mw-headline" id="関連項目">関連項目</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Node.js&amp;action=edit&amp;section=8" title="節を編集: 関連項目">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="mbox-small plainlinks sisterproject noprint" style="border:1px solid #aaa;background-color:#f9f9f9;width:22em;">
+<tr>
+<td class="mbox-image"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/30px-Commons-logo.svg.png" width="30" height="40" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/45px-Commons-logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Commons-logo.svg/59px-Commons-logo.svg.png 2x" data-file-width="1024" data-file-height="1376" /></td>
+<td class="mbox-text plainlist" style="font-size:100%;">ウィキメディア・コモンズには、<b><span class="plainlinks"><a class="external text" href="https://commons.wikimedia.org/wiki/Category:Node.js?uselang=ja">Node.js</a></span></b>に関連するカテゴリがあります。</td>
+</tr>
+</table>
+<ul>
+<li><a href="/wiki/JavaScript" title="JavaScript">JavaScript</a></li>
+<li><a href="/wiki/Google_V8_JavaScript_Engine" title="Google V8 JavaScript Engine">Google V8 JavaScript Engine</a></li>
+<li><a href="/wiki/MEAN_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%90%E3%83%B3%E3%83%89%E3%83%AB)" title="MEAN (ソフトウェアバンドル)">MEAN (ソフトウェアバンドル)</a></li>
+</ul>
+<h2><span id=".E5.A4.96.E9.83.A8.E3.83.AA.E3.83.B3.E3.82.AF"></span><span class="mw-headline" id="外部リンク">外部リンク</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Node.js&amp;action=edit&amp;section=9" title="節を編集: 外部リンク">編集</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul>
+<li><a rel="nofollow" class="external text" href="https://nodejs.org/">公式ウェブサイト</a> <span style="font-size:0.95em; font-weight:bold; color:#555">（英語）</span></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/nodejs/node">ソースリポジトリ</a></li>
+<li><a rel="nofollow" class="external text" href="https://nodejs.jp/">Node.js 日本ユーザグループ</a></li>
+</ul>
+<table class="navbox" style="border-collapse:collapse;;">
+<tr>
+<td>
+<table class="nowraplinks collapsible autocollapse" style="background:transparent;color:inherit;;min-width:100%;border-spacing:2px;border-collapse:separate;">
+<tr>
+<th style="" colspan="2" class="navbox-title">
+<div style="float:left;width:6em;text-align:left;">
+<div class="noprint plainlinks navbar hlist" style="white-space:nowrap;font-size:60%;font-weight:normal;background-color:transparent;padding:0;color:#000;;border:none;">
+<ul style="display:inline;">
+<li><a href="/wiki/Template:JavaScript" title="Template:JavaScript"><span title="このテンプレートを表示します" style="font-size:125%;;border:none;">表</span></a></li>
+<li><a href="/w/index.php?title=Template%E2%80%90%E3%83%8E%E3%83%BC%E3%83%88:JavaScript&amp;action=edit&amp;redlink=1" class="new" title="Template‐ノート:JavaScript (存在しないページ)"><span title="このテンプレートのノートを表示します" style="font-size:125%;color:#002bb8;;border:none;">話</span></a></li>
+<li><a class="external text" href="https://ja.wikipedia.org/w/index.php?title=Template:JavaScript&amp;action=edit"><span title="このテンプレートを編集します。保存の前にプレビューを忘れずに。" style="font-size:125%;color:#002bb8;;border:none;">編</span></a></li>
+<li><a class="external text" href="https://ja.wikipedia.org/w/index.php?title=Template:JavaScript&amp;action=history"><span title="このテンプレートの過去の版を表示します" style="font-size:125%;color:#002bb8;;border:none;">歴</span></a></li>
+</ul>
+</div>
+</div>
+<span style="font-size:110%;"><a href="/wiki/JavaScript" title="JavaScript">JavaScript</a></span></th>
+</tr>
+<tr>
+<td class="navbox-group" style=";">概念</td>
+<td style="text-align:left;width:100%;padding:0;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0 0.25em">
+<ul>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="/w/index.php?title=JavaScript%E3%81%AE%E6%96%87%E6%B3%95&amp;action=edit&amp;redlink=1" class="new" title="JavaScriptの文法 (存在しないページ)">文法</a><span style="font-size: 0.77em; font-weight: normal;" class="noprint">（<a href="https://en.wikipedia.org/wiki/JavaScript_syntax" class="extiw" title="en:JavaScript syntax">英語版</a>）</span></span></li>
+<li><a href="/wiki/Ajax" title="Ajax">Ajax</a></li>
+<li><a href="/wiki/%E3%83%80%E3%82%A4%E3%83%8A%E3%83%9F%E3%83%83%E3%82%AFHTML" title="ダイナミックHTML">DHTML</a></li>
+<li><a href="/wiki/%E6%8E%A7%E3%81%88%E3%82%81%E3%81%AAJavaScript" title="控えめなJavaScript">控えめなJavaScript</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="navbox-group" style=";">エンジン</td>
+<td style="text-align:left;width:100%;padding:0;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0 0.25em">
+<ul>
+<li><a href="/wiki/Presto" title="Presto">Carakan/Futhark/Linear B</a></li>
+<li><a href="/wiki/Chakra" title="Chakra">Chakra</a></li>
+<li><a href="/wiki/WebKit" title="WebKit">JavaScriptCore</a></li>
+<li><a href="/wiki/JScript" title="JScript">JScript</a></li>
+<li><a href="/wiki/KJS" title="KJS">KJS</a></li>
+<li><a href="/wiki/Narcissus" title="Narcissus">Narcissus</a></li>
+<li><a href="/wiki/Rhino" title="Rhino">Rhino</a></li>
+<li><a href="/wiki/SpiderMonkey" title="SpiderMonkey">SpiderMonkey</a></li>
+<li><a href="/wiki/Google_V8_JavaScript_Engine" title="Google V8 JavaScript Engine">V8</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="navbox-group" style=";"><a href="/wiki/%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9" title="コンパイラ">コンパイラ</a></td>
+<td style="text-align:left;width:100%;padding:0;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0 0.25em">
+<ul>
+<li><a href="/wiki/Clojure" title="Clojure">ClojureScript</a></li>
+<li><a href="/wiki/CoffeeScript" title="CoffeeScript">CoffeeScript</a></li>
+<li><a href="/wiki/Emscripten" title="Emscripten">Emscripten</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="/w/index.php?title=Google_Closure_Tools&amp;action=edit&amp;redlink=1" class="new" title="Google Closure Tools (存在しないページ)">Google Closure Compiler</a><span style="font-size: 0.77em; font-weight: normal;" class="noprint">（<a href="https://en.wikipedia.org/wiki/Google_Closure_Tools" class="extiw" title="en:Google Closure Tools">英語版</a>）</span></span></li>
+<li><a href="/wiki/Google_Web_Toolkit" title="Google Web Toolkit">Google Web Toolkit</a></li>
+<li><a href="/wiki/Haxe" title="Haxe">Haxe</a></li>
+<li><a href="/wiki/JSX" title="JSX">JSX</a></li>
+<li><a href="/wiki/Kotlin" title="Kotlin">Kotlin</a></li>
+<li><a href="/wiki/TypeScript" title="TypeScript">TypeScript</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="navbox-group" style=";"><a href="/wiki/%E3%83%87%E3%83%90%E3%83%83%E3%82%AC" title="デバッガ">デバッガ</a></td>
+<td style="text-align:left;width:100%;padding:0;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0 0.25em">
+<ul>
+<li><a href="/wiki/Firebug" title="Firebug">Firebug</a></li>
+<li><a href="/wiki/Google_Chrome" title="Google Chrome">Google Chrome Developer Tools</a></li>
+<li><a href="/wiki/Internet_Explorer" title="Internet Explorer">Internet Explorer Developer Tools</a></li>
+<li><a href="/wiki/Opera" title="Opera">Opera Dragonfly</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Visual Studio</a>
+<ul>
+<li><a href="/wiki/Microsoft_Visual_Studio_Express" title="Microsoft Visual Studio Express">Visual Studio Express</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Visual_Studio_Code" title="Visual Studio Code">Visual Studio Code</a></li>
+<li><a href="/wiki/Safari" title="Safari">Web Inspector</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="navbox-group" style=";">エディタ</td>
+<td style="text-align:left;width:100%;padding:0;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0 0.25em">
+<ul>
+<li><a href="/wiki/Atom_(%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF)" title="Atom (テキストエディタ)">Atom</a></li>
+<li><a href="/wiki/Brackets" title="Brackets">Brackets</a></li>
+<li><a href="/wiki/Microsoft_Visual_Studio" title="Microsoft Visual Studio">Visual Studio</a>
+<ul>
+<li><a href="/wiki/Microsoft_Visual_Studio_Express" title="Microsoft Visual Studio Express">Visual Studio Express</a></li>
+</ul>
+</li>
+<li><a href="/wiki/Visual_Studio_Code" title="Visual Studio Code">Visual Studio Code</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="navbox-group" style=";">サーバーサイド</td>
+<td style="text-align:left;width:100%;padding:0;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0 0.25em">
+<ul>
+<li><a href="/wiki/Active_Server_Pages" title="Active Server Pages">Active Server Pages</a></li>
+<li><a href="/wiki/CommonJS" title="CommonJS">CommonJS</a></li>
+<li><a class="mw-selflink selflink">Node.js</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="/w/index.php?title=Vert.x&amp;action=edit&amp;redlink=1" class="new" title="Vert.x (存在しないページ)">Vert.x</a><span style="font-size: 0.77em; font-weight: normal;" class="noprint">（<a href="https://en.wikipedia.org/wiki/Vert.x" class="extiw" title="en:Vert.x">英語版</a>）</span></span></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="navbox-group" style=";"><a href="/wiki/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF" title="ソフトウェアフレームワーク">フレームワーク</a><br clear="all" />
+・<a href="/wiki/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA" title="ライブラリ">ライブラリ</a></td>
+<td style="text-align:left;width:100%;padding:0;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0 0.25em">
+<ul>
+<li><a href="/wiki/AngularJS" title="AngularJS">AngularJS</a></li>
+<li><a href="/wiki/Backbone.js" title="Backbone.js">Backbone.js</a></li>
+<li><a href="/wiki/Dojo_Toolkit" title="Dojo Toolkit">Dojo</a></li>
+<li><a href="/wiki/Express.js" title="Express.js">Express.js</a></li>
+<li><a href="/wiki/Ext_JS" title="Ext JS">Ext JS</a></li>
+<li><a href="/wiki/Google_Web_Toolkit" title="Google Web Toolkit">Google Web Toolkit</a></li>
+<li><a href="/wiki/JQuery" title="JQuery">jQuery</a>
+<ul>
+<li><a href="/wiki/JQuery_Mobile" title="JQuery Mobile">Mobile</a></li>
+</ul>
+</li>
+<li><a href="/wiki/MathJax" title="MathJax">MathJax</a></li>
+<li><a href="/wiki/MochiKit" title="MochiKit">MochiKit</a></li>
+<li><a href="/wiki/MooTools" title="MooTools">MooTools</a></li>
+<li><a href="/wiki/Prototype_JavaScript_Framework" title="Prototype JavaScript Framework">Prototype</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="/w/index.php?title=React_(JavaScript%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA)&amp;action=edit&amp;redlink=1" class="new" title="React (JavaScriptライブラリ) (存在しないページ)">React</a><span style="font-size: 0.77em; font-weight: normal;" class="noprint">（<a href="https://en.wikipedia.org/wiki/React_(JavaScript_library)" class="extiw" title="en:React (JavaScript library)">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="/w/index.php?title=YUI_Library&amp;action=edit&amp;redlink=1" class="new" title="YUI Library (存在しないページ)">YUI Library</a><span style="font-size: 0.77em; font-weight: normal;" class="noprint">（<a href="https://en.wikipedia.org/wiki/YUI_Library" class="extiw" title="en:YUI Library">英語版</a>）</span></span></li>
+<li><a href="/wiki/Vue.js" title="Vue.js">Vue.js</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="navbox-group" style=";"><a href="/wiki/%E5%8D%98%E4%BD%93%E3%83%86%E3%82%B9%E3%83%88" title="単体テスト">ユニットテスト</a></td>
+<td style="text-align:left;width:100%;padding:0;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0 0.25em">
+<ul>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="/w/index.php?title=Mocha_(JavaScript%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF)&amp;action=edit&amp;redlink=1" class="new" title="Mocha (JavaScriptフレームワーク) (存在しないページ)">Mocha</a><span style="font-size: 0.77em; font-weight: normal;" class="noprint">（<a href="https://en.wikipedia.org/wiki/Mocha_(JavaScript_framework)" class="extiw" title="en:Mocha (JavaScript framework)">英語版</a>）</span></span></li>
+<li><a href="/wiki/QUnit" title="QUnit">QUnit</a></li>
+<li><a href="/wiki/%E3%83%A6%E3%83%8B%E3%83%83%E3%83%88%E3%83%86%E3%82%B9%E3%83%88%E3%83%BB%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0%E3%83%AF%E3%83%BC%E3%82%AF%E4%B8%80%E8%A6%A7#JavaScript" title="ユニットテスト・フレームワーク一覧">ユニットテスト・フレームワーク一覧</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="navbox-group" style=";"><a href="/wiki/%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF" title="ドキュメンテーションジェネレータ">Docジェネレータ</a></td>
+<td style="text-align:left;width:100%;padding:0;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0 0.25em">
+<ul>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="/w/index.php?title=JSDoc&amp;action=edit&amp;redlink=1" class="new" title="JSDoc (存在しないページ)">JSDoc</a><span style="font-size: 0.77em; font-weight: normal;" class="noprint">（<a href="https://en.wikipedia.org/wiki/JSDoc" class="extiw" title="en:JSDoc">英語版</a>）</span></span></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="navbox-group" style=";"><a href="/wiki/%E9%9D%99%E7%9A%84%E3%82%B3%E3%83%BC%E3%83%89%E8%A7%A3%E6%9E%90" title="静的コード解析">コード解析</a></td>
+<td style="text-align:left;width:100%;padding:0;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0 0.25em">
+<ul>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="/w/index.php?title=JSHint&amp;action=edit&amp;redlink=1" class="new" title="JSHint (存在しないページ)">JSHint</a><span style="font-size: 0.77em; font-weight: normal;" class="noprint">（<a href="https://en.wikipedia.org/wiki/JSHint" class="extiw" title="en:JSHint">英語版</a>）</span></span></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="/w/index.php?title=JSLint&amp;action=edit&amp;redlink=1" class="new" title="JSLint (存在しないページ)">JSLint</a><span style="font-size: 0.77em; font-weight: normal;" class="noprint">（<a href="https://en.wikipedia.org/wiki/JSLint" class="extiw" title="en:JSLint">英語版</a>）</span></span></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="navbox-group" style=";"><a href="/wiki/%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E7%AE%A1%E7%90%86%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0" title="パッケージ管理システム">パッケージ管理</a></td>
+<td style="text-align:left;width:100%;padding:0;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0 0.25em">
+<ul>
+<li><a href="/wiki/Npm_(%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E7%AE%A1%E7%90%86%E3%83%84%E3%83%BC%E3%83%AB)" title="Npm (パッケージ管理ツール)">npm</a></li>
+<li><a href="/wiki/NuGet" title="NuGet">NuGet</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="navbox-group" style=";">関連<a href="/wiki/%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%83%BC" title="テクノロジー">技術</a></td>
+<td style="text-align:left;width:100%;padding:0;;;" class="navbox-list navbox-even hlist">
+<div style="padding:0 0.25em">
+<ul>
+<li><a href="/wiki/Cascading_Style_Sheets" title="Cascading Style Sheets">CSS</a></li>
+<li><a href="/wiki/Document_Object_Model" title="Document Object Model">DOM</a></li>
+<li><a href="/wiki/HyperText_Markup_Language" title="HyperText Markup Language">HTML</a></li>
+<li><a href="/wiki/JavaScript_Object_Notation" title="JavaScript Object Notation">JSON</a></li>
+<li><a href="/wiki/JSONP" title="JSONP">JSONP</a></li>
+<li><a href="/wiki/WebAssembly" title="WebAssembly">WebAssembly</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="navbox-group" style=";">人物</td>
+<td style="text-align:left;width:100%;padding:0;;;" class="navbox-list navbox-odd hlist">
+<div style="padding:0 0.25em">
+<ul>
+<li><a href="/wiki/%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BB%E3%83%AC%E3%82%B7%E3%82%B0" title="ジョン・レシグ">ジョン・レシグ</a></li>
+<li><span title="リンク先の項目はまだありません。新規の執筆や他言語版からの翻訳が望まれます。"><a href="/w/index.php?title=%E3%83%80%E3%82%B0%E3%83%A9%E3%82%B9%E3%83%BB%E3%82%AF%E3%83%AD%E3%83%83%E3%82%AF%E3%83%95%E3%82%A9%E3%83%BC%E3%83%89&amp;action=edit&amp;redlink=1" class="new" title="ダグラス・クロックフォード (存在しないページ)">ダグラス・クロックフォード</a><span style="font-size: 0.77em; font-weight: normal;" class="noprint">（<a href="https://en.wikipedia.org/wiki/Douglas_Crockford" class="extiw" title="en:Douglas Crockford">英語版</a>）</span></span></li>
+<li><a href="/wiki/%E3%83%96%E3%83%AC%E3%83%B3%E3%83%80%E3%83%B3%E3%83%BB%E3%82%A2%E3%82%A4%E3%82%AF" title="ブレンダン・アイク">ブレンダン・アイク</a></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td class="navbox-abovebelow hlist" style="" colspan="2">
+<ul>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Portal.svg" class="image" title="ポータル"><img alt="ポータル" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Portal.svg/16px-Portal.svg.png" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Portal.svg/24px-Portal.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Portal.svg/32px-Portal.svg.png 2x" data-file-width="36" data-file-height="32" /></a><a href="/wiki/Portal:%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF" title="Portal:コンピュータ">コンピュータ</a></li>
+<li><a href="/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:Folder_Hexagonal_Icon.svg" class="image" title="カテゴリ"><img alt="カテゴリ" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Folder_Hexagonal_Icon.svg/16px-Folder_Hexagonal_Icon.svg.png" width="16" height="14" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Folder_Hexagonal_Icon.svg/24px-Folder_Hexagonal_Icon.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/4/48/Folder_Hexagonal_Icon.svg/32px-Folder_Hexagonal_Icon.svg.png 2x" data-file-width="36" data-file-height="31" /></a> <b><a href="/wiki/Category:JavaScript" title="Category:JavaScript">カテゴリ</a></b></li>
+</ul>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1273
+Cached time: 20180703041337
+Cache expiry: 86400
+Dynamic content: true
+CPU time usage: 0.236 seconds
+Real time usage: 0.319 seconds
+Preprocessor visited node count: 4030/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 66519/2097152 bytes
+Template argument size: 7792/2097152 bytes
+Highest expansion depth: 27/40
+Expensive parser function count: 18/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 8744/5000000 bytes
+Number of Wikibase entities loaded: 1/400
+Lua time usage: 0.033/10.000 seconds
+Lua memory usage: 1.78 MB/50 MB
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  268.135      1 -total
+ 43.80%  117.452      1 Template:Infobox_Software
+ 41.33%  110.829      1 Template:Infobox
+ 26.43%   70.876      1 Template:Reflist
+ 21.47%   57.574      6 Template:Cite_web
+ 13.46%   36.085      1 Template:JavaScript
+ 11.96%   32.068      1 Template:Navbox
+ 10.33%   27.685      6 Template:Accessdate
+  9.00%   24.134      1 Template:Latest_stable_software_release/Node.js
+  8.88%   23.823      6 Template:Accessdate/core
+-->
+</div>
+<!-- Saved in parser cache with key jawiki:pcache:idhash:2217415-0!canonical and timestamp 20180703041336 and revision id 67597085
+ -->
+<noscript><img src="//ja.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript></div>					<div class="printfooter">
+						「<a dir="ltr" href="https://ja.wikipedia.org/w/index.php?title=Node.js&amp;oldid=67597085">https://ja.wikipedia.org/w/index.php?title=Node.js&amp;oldid=67597085</a>」から取得					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA" title="特別:カテゴリ">カテゴリ</a>: <ul><li><a href="/wiki/Category:JavaScript" title="Category:JavaScript">JavaScript</a></li><li><a href="/wiki/Category:%E3%82%A6%E3%82%A7%E3%83%96%E9%96%8B%E7%99%BA" title="Category:ウェブ開発">ウェブ開発</a></li><li><a href="/wiki/Category:%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2" title="Category:オープンソースソフトウェア">オープンソースソフトウェア</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>案内メニュー</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">個人用ツール</h3>
+						<ul>
+							<li id="pt-anonuserpage">ログインしていません</li><li id="pt-anontalk"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%88%E3%83%BC%E3%82%AF%E3%83%9A%E3%83%BC%E3%82%B8" title="このIPアドレスからなされた編集についての議論 [n]" accesskey="n">トーク</a></li><li id="pt-anoncontribs"><a href="/wiki/%E7%89%B9%E5%88%A5:%E8%87%AA%E5%88%86%E3%81%AE%E6%8A%95%E7%A8%BF%E8%A8%98%E9%8C%B2" title="このIPアドレスからなされた編集の一覧 [y]" accesskey="y">投稿記録</a></li><li id="pt-createaccount"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E4%BD%9C%E6%88%90&amp;returnto=Node.js" title="アカウントを作成してログインすることをお勧めしますが、必須ではありません">アカウント作成</a></li><li id="pt-login"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3&amp;returnto=Node.js" title="ログインすることを推奨します。ただし、必須ではありません。 [o]" accesskey="o">ログイン</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">名前空間</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="/wiki/Node.js" title="本文を閲覧 [c]" accesskey="c">ページ</a></span></li><li id="ca-talk" class="new"><span><a href="/w/index.php?title=%E3%83%8E%E3%83%BC%E3%83%88:Node.js&amp;action=edit&amp;redlink=1" rel="discussion" title="本文ページについての議論 (存在しないページ) [t]" accesskey="t">ノート</a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label" />
+						<h3 id="p-variants-label">
+							<span>変種</span>
+						</h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">表示</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="/wiki/Node.js">閲覧</a></span></li><li id="ca-edit" class="collapsible"><span><a href="/w/index.php?title=Node.js&amp;action=edit" title="このページを編集 [e]" accesskey="e">編集</a></span></li><li id="ca-history" class="collapsible"><span><a href="/w/index.php?title=Node.js&amp;action=history" title="このページの過去の版 [h]" accesskey="h">履歴表示</a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label" />
+						<h3 id="p-cactions-label"><span>その他</span></h3>
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">検索</label>
+						</h3>
+						<form action="/w/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Wikipedia内を検索" title="Wikipedia内を検索する [f]" accesskey="f" id="searchInput"/><input type="hidden" value="特別:検索" name="title"/><input type="submit" name="fulltext" value="検索" title="この文字列が含まれるページを探す" id="mw-searchButton" class="searchButton mw-fallbackSearchButton"/><input type="submit" name="go" value="表示" title="厳密に一致する名前のページが存在すれば、そのページへ移動する" id="searchButton" class="searchButton"/>							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8"  title="メインページに移動する"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">案内</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage"><a href="/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8" title="メインページに移動する [z]" accesskey="z">メインページ</a></li><li id="n-portal"><a href="/wiki/Wikipedia:%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3%E3%83%BB%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB" title="このプロジェクトについて、できること、情報を入手する場所">コミュニティ・ポータル</a></li><li id="n-currentevents"><a href="/wiki/Portal:%E6%9C%80%E8%BF%91%E3%81%AE%E5%87%BA%E6%9D%A5%E4%BA%8B" title="最近の出来事の背景を知る">最近の出来事</a></li><li id="n-newpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%96%B0%E3%81%97%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8" title="最近新規に作成されたページの一覧">新しいページ</a></li><li id="n-recentchanges"><a href="/wiki/%E7%89%B9%E5%88%A5:%E6%9C%80%E8%BF%91%E3%81%AE%E6%9B%B4%E6%96%B0" title="このウィキにおける最近の更新の一覧 [r]" accesskey="r">最近の更新</a></li><li id="n-randompage"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%81%8A%E3%81%BE%E3%81%8B%E3%81%9B%E8%A1%A8%E7%A4%BA" title="無作為に選択されたページを読み込む [x]" accesskey="x">おまかせ表示</a></li><li id="n-sandbox"><a href="/wiki/Wikipedia:%E3%82%B5%E3%83%B3%E3%83%89%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9" title="練習用のページ">練習用ページ</a></li><li id="n-commonsupload"><a href="//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja" title="画像やメディアファイルをウィキメディア・コモンズにアップロード">アップロード (ウィキメディア・コモンズ)</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-help" aria-labelledby="p-help-label">
+			<h3 id="p-help-label">ヘルプ</h3>
+			<div class="body">
+								<ul>
+					<li id="n-help"><a href="/wiki/Help:%E7%9B%AE%E6%AC%A1" title="情報を得る場所">ヘルプ</a></li><li id="n-villagepump"><a href="/wiki/Wikipedia:%E4%BA%95%E6%88%B8%E7%AB%AF" title="プロジェクトについての意見交換">井戸端</a></li><li id="n-notice"><a href="/wiki/Wikipedia:%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="プロジェクトについてのお知らせ">お知らせ</a></li><li id="n-bugreportspage"><a href="/wiki/Wikipedia:%E3%83%90%E3%82%B0%E3%81%AE%E5%A0%B1%E5%91%8A" title="ウィキペディア・ソフトウェアのバグ報告">バグの報告</a></li><li id="n-sitesupport"><a href="//donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_ja.wikipedia.org&amp;uselang=ja" title="ご支援ください">寄付</a></li><li id="n-contact"><a href="/wiki/Wikipedia:%E9%80%A3%E7%B5%A1%E5%85%88" title="ウィキペディアやウィキメディア財団に関する連絡先">ウィキペディアに関するお問い合わせ</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">ツール</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="/wiki/%E7%89%B9%E5%88%A5:%E3%83%AA%E3%83%B3%E3%82%AF%E5%85%83/Node.js" title="ここにリンクしている全ウィキページの一覧 [j]" accesskey="j">リンク元</a></li><li id="t-recentchangeslinked"><a href="/wiki/%E7%89%B9%E5%88%A5:%E9%96%A2%E9%80%A3%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%AE%E6%9B%B4%E6%96%B0%E7%8A%B6%E6%B3%81/Node.js" rel="nofollow" title="このページからリンクしているページの最近の更新 [k]" accesskey="k">関連ページの更新状況</a></li><li id="t-upload"><a href="/wiki/Wikipedia:%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89" title="ファイルをアップロードする [u]" accesskey="u">ファイルをアップロード</a></li><li id="t-specialpages"><a href="/wiki/%E7%89%B9%E5%88%A5:%E7%89%B9%E5%88%A5%E3%83%9A%E3%83%BC%E3%82%B8%E4%B8%80%E8%A6%A7" title="特別ページの一覧 [q]" accesskey="q">特別ページ</a></li><li id="t-permalink"><a href="/w/index.php?title=Node.js&amp;oldid=67597085" title="このページのこの版への固定リンク">この版への固定リンク</a></li><li id="t-info"><a href="/w/index.php?title=Node.js&amp;action=info" title="このページについての詳細情報">ページ情報</a></li><li id="t-wikibase"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q756100" title="関連付けられたデータリポジトリ項目へのリンク [g]" accesskey="g">ウィキデータ項目</a></li><li id="t-cite"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%81%93%E3%81%AE%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%92%E5%BC%95%E7%94%A8&amp;page=Node.js&amp;id=67597085" title="このページの引用方法">このページを引用</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+			<h3 id="p-coll-print_export-label">印刷/書き出し</h3>
+			<div class="body">
+								<ul>
+					<li id="coll-create_a_book"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:%E3%83%96%E3%83%83%E3%82%AF&amp;bookcmd=book_creator&amp;referer=Node.js">ブックの新規作成</a></li><li id="coll-download-as-rdf2latex"><a href="/w/index.php?title=%E7%89%B9%E5%88%A5:ElectronPdf&amp;page=Node.js&amp;action=show-download-screen">PDF 形式でダウンロード</a></li><li id="t-print"><a href="/w/index.php?title=Node.js&amp;printable=yes" title="このページの印刷用ページ [p]" accesskey="p">印刷用バージョン</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-wikibase-otherprojects" aria-labelledby="p-wikibase-otherprojects-label">
+			<h3 id="p-wikibase-otherprojects-label">他のプロジェクト</h3>
+			<div class="body">
+								<ul>
+					<li class="wb-otherproject-link wb-otherproject-commons"><a href="https://commons.wikimedia.org/wiki/Category:Node.js" hreflang="en">コモンズ</a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label">
+			<h3 id="p-lang-label">他言語版</h3>
+			<div class="body">
+								<ul>
+					<li class="interlanguage-link interwiki-ar"><a href="https://ar.wikipedia.org/wiki/%D9%86%D9%88%D8%AF.%D8%AC%D9%8A_%D8%A5%D8%B3" title="アラビア語: نود.جي إس" lang="ar" hreflang="ar" class="interlanguage-link-target">العربية</a></li><li class="interlanguage-link interwiki-az"><a href="https://az.wikipedia.org/wiki/Node.js" title="アゼルバイジャン語: Node.js" lang="az" hreflang="az" class="interlanguage-link-target">Azərbaycanca</a></li><li class="interlanguage-link interwiki-be"><a href="https://be.wikipedia.org/wiki/Node.js" title="ベラルーシ語: Node.js" lang="be" hreflang="be" class="interlanguage-link-target">Беларуская</a></li><li class="interlanguage-link interwiki-bg"><a href="https://bg.wikipedia.org/wiki/Node.js" title="ブルガリア語: Node.js" lang="bg" hreflang="bg" class="interlanguage-link-target">Български</a></li><li class="interlanguage-link interwiki-ca"><a href="https://ca.wikipedia.org/wiki/Node.js" title="カタロニア語: Node.js" lang="ca" hreflang="ca" class="interlanguage-link-target">Català</a></li><li class="interlanguage-link interwiki-ckb"><a href="https://ckb.wikipedia.org/wiki/%D9%86%DB%86%D9%88%D8%AF.%D8%AC%DB%95%DB%8C_%D8%A6%DB%8E%D8%B3" title="中央クルド語: نۆود.جەی ئێس" lang="ckb" hreflang="ckb" class="interlanguage-link-target">کوردی</a></li><li class="interlanguage-link interwiki-cs"><a href="https://cs.wikipedia.org/wiki/Node.js" title="チェコ語: Node.js" lang="cs" hreflang="cs" class="interlanguage-link-target">Čeština</a></li><li class="interlanguage-link interwiki-da"><a href="https://da.wikipedia.org/wiki/Node.js" title="デンマーク語: Node.js" lang="da" hreflang="da" class="interlanguage-link-target">Dansk</a></li><li class="interlanguage-link interwiki-de"><a href="https://de.wikipedia.org/wiki/Node.js" title="ドイツ語: Node.js" lang="de" hreflang="de" class="interlanguage-link-target">Deutsch</a></li><li class="interlanguage-link interwiki-el"><a href="https://el.wikipedia.org/wiki/Nodejs" title="ギリシャ語: Nodejs" lang="el" hreflang="el" class="interlanguage-link-target">Ελληνικά</a></li><li class="interlanguage-link interwiki-en"><a href="https://en.wikipedia.org/wiki/Node.js" title="英語: Node.js" lang="en" hreflang="en" class="interlanguage-link-target">English</a></li><li class="interlanguage-link interwiki-es"><a href="https://es.wikipedia.org/wiki/Node.js" title="スペイン語: Node.js" lang="es" hreflang="es" class="interlanguage-link-target">Español</a></li><li class="interlanguage-link interwiki-et"><a href="https://et.wikipedia.org/wiki/Node.js" title="エストニア語: Node.js" lang="et" hreflang="et" class="interlanguage-link-target">Eesti</a></li><li class="interlanguage-link interwiki-eu"><a href="https://eu.wikipedia.org/wiki/Node.js" title="バスク語: Node.js" lang="eu" hreflang="eu" class="interlanguage-link-target">Euskara</a></li><li class="interlanguage-link interwiki-fa"><a href="https://fa.wikipedia.org/wiki/%D9%86%D9%88%D8%AF.%D8%AC%DB%8C%E2%80%8C%D8%A7%D8%B3" title="ペルシア語: نود.جی‌اس" lang="fa" hreflang="fa" class="interlanguage-link-target">فارسی</a></li><li class="interlanguage-link interwiki-fi"><a href="https://fi.wikipedia.org/wiki/Node.js" title="フィンランド語: Node.js" lang="fi" hreflang="fi" class="interlanguage-link-target">Suomi</a></li><li class="interlanguage-link interwiki-fr"><a href="https://fr.wikipedia.org/wiki/Node.js" title="フランス語: Node.js" lang="fr" hreflang="fr" class="interlanguage-link-target">Français</a></li><li class="interlanguage-link interwiki-he"><a href="https://he.wikipedia.org/wiki/Node.js" title="ヘブライ語: Node.js" lang="he" hreflang="he" class="interlanguage-link-target">עברית</a></li><li class="interlanguage-link interwiki-hi"><a href="https://hi.wikipedia.org/wiki/%E0%A4%A8%E0%A5%8B%E0%A4%A1.%E0%A4%9C%E0%A5%87%E0%A4%8F%E0%A4%B8" title="ヒンディー語: नोड.जेएस" lang="hi" hreflang="hi" class="interlanguage-link-target">हिन्दी</a></li><li class="interlanguage-link interwiki-hu"><a href="https://hu.wikipedia.org/wiki/Node.js" title="ハンガリー語: Node.js" lang="hu" hreflang="hu" class="interlanguage-link-target">Magyar</a></li><li class="interlanguage-link interwiki-id"><a href="https://id.wikipedia.org/wiki/Node.js" title="インドネシア語: Node.js" lang="id" hreflang="id" class="interlanguage-link-target">Bahasa Indonesia</a></li><li class="interlanguage-link interwiki-it"><a href="https://it.wikipedia.org/wiki/Node.js" title="イタリア語: Node.js" lang="it" hreflang="it" class="interlanguage-link-target">Italiano</a></li><li class="interlanguage-link interwiki-ko"><a href="https://ko.wikipedia.org/wiki/Node.js" title="韓国語: Node.js" lang="ko" hreflang="ko" class="interlanguage-link-target">한국어</a></li><li class="interlanguage-link interwiki-ky"><a href="https://ky.wikipedia.org/wiki/Node.js" title="キルギス語: Node.js" lang="ky" hreflang="ky" class="interlanguage-link-target">Кыргызча</a></li><li class="interlanguage-link interwiki-lv"><a href="https://lv.wikipedia.org/wiki/Node.js" title="ラトビア語: Node.js" lang="lv" hreflang="lv" class="interlanguage-link-target">Latviešu</a></li><li class="interlanguage-link interwiki-ml"><a href="https://ml.wikipedia.org/wiki/%E0%B4%A8%E0%B5%8B%E0%B4%A1%E0%B5%8D.%E0%B4%9C%E0%B5%86%E0%B4%8E%E0%B4%B8%E0%B5%8D" title="マラヤーラム語: നോഡ്.ജെഎസ്" lang="ml" hreflang="ml" class="interlanguage-link-target">മലയാളം</a></li><li class="interlanguage-link interwiki-ms"><a href="https://ms.wikipedia.org/wiki/Node.js" title="マレー語: Node.js" lang="ms" hreflang="ms" class="interlanguage-link-target">Bahasa Melayu</a></li><li class="interlanguage-link interwiki-nl"><a href="https://nl.wikipedia.org/wiki/Node.js" title="オランダ語: Node.js" lang="nl" hreflang="nl" class="interlanguage-link-target">Nederlands</a></li><li class="interlanguage-link interwiki-no"><a href="https://no.wikipedia.org/wiki/Node.js" title="ノルウェー語: Node.js" lang="no" hreflang="no" class="interlanguage-link-target">Norsk</a></li><li class="interlanguage-link interwiki-pl"><a href="https://pl.wikipedia.org/wiki/Node.js" title="ポーランド語: Node.js" lang="pl" hreflang="pl" class="interlanguage-link-target">Polski</a></li><li class="interlanguage-link interwiki-pt"><a href="https://pt.wikipedia.org/wiki/Node.js" title="ポルトガル語: Node.js" lang="pt" hreflang="pt" class="interlanguage-link-target">Português</a></li><li class="interlanguage-link interwiki-ru"><a href="https://ru.wikipedia.org/wiki/Node.js" title="ロシア語: Node.js" lang="ru" hreflang="ru" class="interlanguage-link-target">Русский</a></li><li class="interlanguage-link interwiki-simple"><a href="https://simple.wikipedia.org/wiki/Node.js" title="シンプル英語: Node.js" lang="simple" hreflang="simple" class="interlanguage-link-target">Simple English</a></li><li class="interlanguage-link interwiki-sr"><a href="https://sr.wikipedia.org/wiki/Node.js" title="セルビア語: Node.js" lang="sr" hreflang="sr" class="interlanguage-link-target">Српски / srpski</a></li><li class="interlanguage-link interwiki-sv"><a href="https://sv.wikipedia.org/wiki/Node.js" title="スウェーデン語: Node.js" lang="sv" hreflang="sv" class="interlanguage-link-target">Svenska</a></li><li class="interlanguage-link interwiki-tr"><a href="https://tr.wikipedia.org/wiki/Node.js" title="トルコ語: Node.js" lang="tr" hreflang="tr" class="interlanguage-link-target">Türkçe</a></li><li class="interlanguage-link interwiki-uk"><a href="https://uk.wikipedia.org/wiki/Node.js" title="ウクライナ語: Node.js" lang="uk" hreflang="uk" class="interlanguage-link-target">Українська</a></li><li class="interlanguage-link interwiki-ur"><a href="https://ur.wikipedia.org/wiki/%D9%86%D9%88%DA%88_%D8%AC%DB%92_%D8%A7%DB%8C%D8%B3" title="ウルドゥー語: نوڈ جے ایس" lang="ur" hreflang="ur" class="interlanguage-link-target">اردو</a></li><li class="interlanguage-link interwiki-vi"><a href="https://vi.wikipedia.org/wiki/Node.js" title="ベトナム語: Node.js" lang="vi" hreflang="vi" class="interlanguage-link-target">Tiếng Việt</a></li><li class="interlanguage-link interwiki-zh"><a href="https://zh.wikipedia.org/wiki/Node.js" title="中国語: Node.js" lang="zh" hreflang="zh" class="interlanguage-link-target">中文</a></li>				</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q756100#sitelinks-wikipedia" title="言語間リンクを編集する" class="wbc-editpage">リンクを編集</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod"> 最終更新 2018年3月4日 (日) 21:58 （日時は<a href="/wiki/%E7%89%B9%E5%88%A5:%E5%80%8B%E4%BA%BA%E8%A8%AD%E5%AE%9A#mw-prefsection-rendering" title="特別:個人設定">個人設定</a>で未設定ならば<a href="/wiki/%E5%8D%94%E5%AE%9A%E4%B8%96%E7%95%8C%E6%99%82" title="協定世界時">UTC</a>）。</li>
+								<li id="footer-info-copyright">テキストは<a href="//ja.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License">クリエイティブ・コモンズ 表示-継承ライセンス</a>の下で利用可能です。追加の条件が適用される場合があります。詳細は<a href="//wikimediafoundation.org/wiki/%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84">利用規約</a>を参照してください。<br /></li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/ja" class="extiw" title="m:Privacy policy/ja">プライバシー・ポリシー</a></li>
+								<li id="footer-places-about"><a href="/wiki/Wikipedia:%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" title="Wikipedia:ウィキペディアについて">ウィキペディアについて</a></li>
+								<li id="footer-places-disclaimer"><a href="/wiki/Wikipedia:%E5%85%8D%E8%B2%AC%E4%BA%8B%E9%A0%85" title="Wikipedia:免責事項">免責事項</a></li>
+								<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">開発者</a></li>
+								<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement">Cookieに関する声明</a></li>
+								<li id="footer-places-mobileview"><a href="//ja.m.wikipedia.org/w/index.php?title=Node.js&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">モバイルビュー</a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+						<a href="https://wikimediafoundation.org/"><img src="/static/images/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"/></a>					</li>
+										<li id="footer-poweredbyico">
+						<a href="//www.mediawiki.org/"><img src="/static/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/static/images/poweredby_mediawiki_132x47.png 1.5x, /static/images/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>					</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.236","walltime":"0.319","ppvisitednodes":{"value":4030,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1500000},"postexpandincludesize":{"value":66519,"limit":2097152},"templateargumentsize":{"value":7792,"limit":2097152},"expansiondepth":{"value":27,"limit":40},"expensivefunctioncount":{"value":18,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":8744,"limit":5000000},"entityaccesscount":{"value":1,"limit":400},"timingprofile":["100.00%  268.135      1 -total"," 43.80%  117.452      1 Template:Infobox_Software"," 41.33%  110.829      1 Template:Infobox"," 26.43%   70.876      1 Template:Reflist"," 21.47%   57.574      6 Template:Cite_web"," 13.46%   36.085      1 Template:JavaScript"," 11.96%   32.068      1 Template:Navbox"," 10.33%   27.685      6 Template:Accessdate","  9.00%   24.134      1 Template:Latest_stable_software_release/Node.js","  8.88%   23.823      6 Template:Accessdate/core"]},"scribunto":{"limitreport-timeusage":{"value":"0.033","limit":"10.000"},"limitreport-memusage":{"value":1871302,"limit":52428800}},"cachereport":{"origin":"mw1273","timestamp":"20180703041337","ttl":86400,"transientcontent":true}}});mw.config.set({"wgBackendResponseTime":416,"wgHostname":"mw1273"});});</script>
+	</body>
+</html>
