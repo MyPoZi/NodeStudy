@@ -135,7 +135,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.showlink_path.js">
+  <component name="RunManager" selected="Node.js.getpage.js">
     <configuration name="diwnload-rhino.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/ch02/01-download/diwnload-rhino.js" working-dir="$PROJECT_DIR$/ch02/01-download/html" />
     <configuration name="download-node-func.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="download-node-func.js" working-dir="$PROJECT_DIR$/ch02/01-download" />
     <configuration name="getpage.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="getpage.js" working-dir="$PROJECT_DIR$/ch02/02-analize" />
@@ -150,9 +150,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.getpage.js" />
         <item itemvalue="Node.js.showlink_path.js" />
         <item itemvalue="Node.js.showlink.js" />
-        <item itemvalue="Node.js.getpage.js" />
         <item itemvalue="Node.js.download-node-func.js" />
         <item itemvalue="Node.js.diwnload-rhino.js" />
       </list>
