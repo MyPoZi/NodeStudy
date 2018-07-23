@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Working Groups | Node.js</title>
+
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+  <meta name="author" content="Node.js Foundation">
+  <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+  <link rel="icon" sizes="32x32" type="image/png" href="/static/favicon.png">
+
+  <meta property="og:site_name" content="Node.js">
+  <meta property="og:title" content="Working Groups | Node.js">
+  <meta property="og:image" content="https://nodejs.org/static/images/logo-hexagon-card.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="224">
+  <meta property="og:image:height" content="256">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@nodejs">
+  <meta name="twitter:title" content="Working Groups | Node.js">
+  <meta name="twitter:image" content="https://nodejs.org/static/images/logo-hexagon-card.png">
+  <meta name="twitter:image:alt" content="The Node.js Hexagon Logo">
+
+  <link rel="canonical" href="https://nodejs.org/en/about/working-groups/">
+  <link rel="alternate" href="/en/feed/blog.xml" title="Node.js Blog" type="application/rss+xml">
+  <link rel="alternate" href="/en/feed/releases.xml" title="Node.js Blog: Releases" type="application/rss+xml">
+  <link rel="alternate" href="/en/feed/vulnerability.xml" title="Node.js Blog: Vulnerability Reports" type="application/rss+xml">
+  <link rel="stylesheet" href="/layouts/css/styles.css" media="all">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+  
+      <a href="/en/" id="logo">
+        <img src="/static/images/logo.svg" alt="node.js">
+      </a>
+  
+      <nav>
+        <ul class="list-divider-pipe">
+          <li>
+            <a href="/en/">Home</a>
+          </li>
+  
+            <li class="active">
+                <a href="/en/about/">About</a>
+            </li>
+            <li>
+                <a href="/en/download/">Downloads</a>
+            </li>
+            <li>
+                <a href="/en/docs/">Docs</a>
+            </li>
+            <li>
+                <a href="/en/get-involved/">Get Involved</a>
+            </li>
+            <li>
+                <a href="/en/security/">Security</a>
+            </li>
+            <li>
+                <a href="/en/blog/">News</a>
+            </li>
+            <li class="nav-foundation">
+                <a href="https://foundation.nodejs.org/">Foundation</a>
+            </li>
+        </ul>
+      </nav>
+  
+    </div>
+  </header>
+
+  <div id="main">
+    <div class="container has-side-nav">
+
+      <aside>
+        <ul>
+                <li>
+                      <a href="/en/about/">About</a>
+                </li>
+                <li>
+                      <a href="/en/about/governance/">Governance</a>
+                </li>
+                <li>
+                      <a href="/en/about/community/">Community</a>
+                </li>
+                <li class="active">
+                      <a href="/en/about/working-groups/">Working Groups</a>
+                </li>
+                <li>
+                      <a href="/en/about/releases/">Releases</a>
+                </li>
+                <li>
+                      <a href="/en/about/resources/">Resources</a>
+                </li>
+                <li>
+                      <a href="/en/about/trademark/">Trademark</a>
+                </li>
+                <li>
+                      <a href="/en/about/privacy/">Privacy Policy</a>
+                </li>
+        </ul>
+      </aside>
+
+      <article>
+        <h1 id="header-core-working-groups">Core Working Groups<a name="core-working-groups" class="anchor" href="#core-working-groups" aria-labelledby="header-core-working-groups"></a></h1><!-- Information here should mostly mirror: https://github.com/nodejs/node/blob/master/WORKING_GROUPS.md -->
+<p>Core Working Groups are created by the
+<a href="https://github.com/nodejs/TSC/blob/master/TSC-Charter.md">Technical Steering Committee (TSC)</a>.</p>
+<h2 id="header-current-working-groups">Current Working Groups<a name="current-working-groups" class="anchor" href="#current-working-groups" aria-labelledby="header-current-working-groups"></a></h2><ul>
+<li><a href="#addon-api">Addon API</a></li>
+<li><a href="#benchmarking">Benchmarking</a></li>
+<li><a href="#build">Build</a></li>
+<li><a href="#diagnostics">Diagnostics</a></li>
+<li><a href="#docker">Docker</a></li>
+<li><a href="#evangelism">Evangelism</a></li>
+<li><a href="#i18n">i18n</a></li>
+<li><a href="#post-mortem">Post-mortem</a></li>
+<li><a href="#release">Release</a></li>
+<li><a href="#security">Security</a></li>
+<li><a href="#streams">Streams</a></li>
+<li><a href="#website">Website</a></li>
+</ul>
+<h3 id="header-addon-api"><a href="https://github.com/nodejs/nan">Addon API</a><a name="addon-api" class="anchor" href="#addon-api" aria-labelledby="header-addon-api"></a></h3><p>The Addon API Working Group is responsible for maintaining the NAN project and
+corresponding <em>nan</em> package in npm. The NAN project makes available an
+abstraction layer for native add-on authors for Node.js,
+assisting in the writing of code that is compatible with many actively used
+versions of Node.js, V8 and libuv.</p>
+<p>Responsibilities include:</p>
+<ul>
+<li>Maintaining the <a href="https://github.com/nodejs/nan">NAN</a> GitHub repository,
+including code, issues and documentation.</li>
+<li>Maintaining the <a href="https://github.com/nodejs/node-addon-examples">addon-examples</a>
+GitHub repository, including code, issues and documentation.</li>
+<li>Maintaining the C++ Addon API within the Node.js project, in subordination to
+the Node.js TSC.</li>
+<li>Maintaining the Addon documentation within the Node.js project, in
+subordination to the Node.js TSC.</li>
+<li>Maintaining the <em>nan</em> package in npm, releasing new versions as appropriate.</li>
+<li>Messaging about the future of the Node.js and NAN interface to give the
+community advance notice of changes.</li>
+</ul>
+<p>The current members can be found in their
+<a href="https://github.com/nodejs/nan#collaborators">README</a>.</p>
+<h3 id="header-benchmarking"><a href="https://github.com/nodejs/benchmarking">Benchmarking</a><a name="benchmarking" class="anchor" href="#benchmarking" aria-labelledby="header-benchmarking"></a></h3><p>The purpose of the Benchmark Working Group is to gain consensus
+on an agreed set of benchmarks that can be used to:</p>
+<ul>
+<li>track and evangelize performance gains made between Node.js releases</li>
+<li>avoid performance regressions between releases</li>
+</ul>
+<p>Responsibilities include:</p>
+<ul>
+<li>Identifying 1 or more benchmarks that reflect customer usage.
+Likely will need more than one to cover typical Node.js use cases
+including low-latency and high concurrency</li>
+<li>Working to get community consensus on the list chosen</li>
+<li>Adding regular execution of chosen benchmarks to Node.js builds</li>
+<li>Tracking/publicizing performance between builds/releases</li>
+</ul>
+<h3 id="header-build"><a href="https://github.com/nodejs/build">Build</a><a name="build" class="anchor" href="#build" aria-labelledby="header-build"></a></h3><p>The Build Working Group's purpose is to create and maintain a distributed
+automation infrastructure.</p>
+<p>Responsibilities include:</p>
+<ul>
+<li>Producing packages for all target platforms.</li>
+<li>Running tests.</li>
+<li>Running performance testing and comparisons.</li>
+<li>Creating and managing build-containers.</li>
+</ul>
+<h3 id="header-diagnostics"><a href="https://github.com/nodejs/diagnostics">Diagnostics</a><a name="diagnostics" class="anchor" href="#diagnostics" aria-labelledby="header-diagnostics"></a></h3><p>The Diagnostics Working Group's purpose is to surface a set of comprehensive,
+documented, and extensible diagnostic interfaces for use by Node.js tools and
+JavaScript VMs.</p>
+<p>Responsibilities include:</p>
+<ul>
+<li>Collaborating with V8 to integrate <code>v8_inspector</code> into Node.js.</li>
+<li>Collaborating with V8 to integrate <code>trace_event</code> into Node.js.</li>
+<li>Collaborating with Core to refine <code>async_wrap</code> and <code>async_hooks</code>.</li>
+<li>Maintaining and improving OS trace system integration (e.g. ETW, LTTNG, dtrace).</li>
+<li>Documenting diagnostic capabilities and APIs in Node.js and its components.</li>
+<li>Exploring opportunities and gaps, discussing feature requests, and addressing
+conflicts in Node.js diagnostics.</li>
+<li>Fostering an ecosystem of diagnostics tools for Node.js.</li>
+</ul>
+<h3 id="header-docker"><a href="https://github.com/nodejs/docker-node">Docker</a><a name="docker" class="anchor" href="#docker" aria-labelledby="header-docker"></a></h3><p>The Docker Working Group's purpose is to build, maintain, and improve official
+Docker images for the Node.js project.</p>
+<p>Responsibilities include:</p>
+<ul>
+<li>Keeping the official Docker images updated in line with new Node.js releases.</li>
+<li>Decide and implement image improvements and/or fixes.</li>
+<li>Maintain and improve the images' documentation.</li>
+</ul>
+<h3 id="header-evangelism"><a href="https://github.com/nodejs/evangelism">Evangelism</a><a name="evangelism" class="anchor" href="#evangelism" aria-labelledby="header-evangelism"></a></h3><p>The Evangelism Working Group promotes the accomplishments
+of Node.js and lets the community know how they can get involved.</p>
+<p>Responsibilities include:</p>
+<ul>
+<li>Facilitating project messaging.</li>
+<li>Managing official project social media.</li>
+<li>Handling the promotion of speakers for meetups and conferences.</li>
+<li>Handling the promotion of community events.</li>
+<li>Publishing regular update summaries and other promotional
+content.</li>
+</ul>
+<h3 id="header-i18n">i18n<a name="i18n" class="anchor" href="#i18n" aria-labelledby="header-i18n"></a></h3><p>The i18n Working Groups handle more than just translations. They
+are endpoints for community members to collaborate with each
+other in their language of choice.</p>
+<p>Each team is organized around a common spoken language. Each
+language community might then produce multiple localizations for
+various project resources.</p>
+<p>Responsibilities include:</p>
+<ul>
+<li>Translating any Node.js materials they believe are relevant to their
+community.</li>
+<li>Reviewing processes for keeping translations up to date and of high quality.</li>
+<li>Managing and monitoring social media channels in their language.</li>
+<li>Promoting Node.js speakers for meetups and conferences in their language.</li>
+</ul>
+<p>Each language community maintains its own membership.</p>
+<ul>
+<li><a href="https://github.com/nodejs/nodejs-ar">nodejs-ar - Arabic (العَرَبِيَّة)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-bg">nodejs-bg - Bulgarian (български)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-bn">nodejs-bn - Bengali (বাংলা)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-zh-CN">nodejs-zh-CN - Chinese (中文)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-cs">nodejs-cs - Czech (Čeština)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-da">nodejs-da - Danish (Dansk)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-de">nodejs-de - German (Deutsch)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-el">nodejs-el - Greek (Ελληνικά)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-es">nodejs-es - Spanish (Español)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-fa">nodejs-fa - Persian (فارسی)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-fi">nodejs-fi - Finnish (Suomi)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-fr">nodejs-fr - French (Français)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-he">nodejs-he - Hebrew (עברית)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-hi">nodejs-hi - Hindi (हिन्दी)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-hu">nodejs-hu - Hungarian (Magyar)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-id">nodejs-id - Indonesian (Bahasa Indonesia)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-it">nodejs-it - Italian (Italiano)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-ja">nodejs-ja - Japanese (日本語)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-ka">nodejs-ka - Georgian (ქართული)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-ko">nodejs-ko - Korean (한국어)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-mk">nodejs-mk - Macedonian (Македонски)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-ms">nodejs-ms - Malay (بهاس ملايو‎)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-nl">nodejs-nl - Dutch (Nederlands)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-no">nodejs-no - Norwegian (Norsk)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-pl">nodejs-pl - Polish (Język Polski)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-pt">nodejs-pt - Portuguese (Português)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-ro">nodejs-ro - Romanian (Română)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-ru">nodejs-ru - Russian (Русский)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-sv">nodejs-sv - Swedish (Svenska)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-ta">nodejs-ta - Tamil (தமிழ்)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-tr">nodejs-tr - Turkish (Türkçe)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-zh-TW">nodejs-zh-TW - Taiwanese (國語)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-uk">nodejs-uk - Ukrainian (Українська)</a></li>
+<li><a href="https://github.com/nodejs/nodejs-vi">nodejs-vi - Vietnamese (Tiếng Việt)</a></li>
+</ul>
+<h3 id="header-post-mortem"><a href="https://github.com/nodejs/post-mortem">Post-mortem</a><a name="post-mortem" class="anchor" href="#post-mortem" aria-labelledby="header-post-mortem"></a></h3><p>The Post-mortem Diagnostics Working Group is dedicated to the support
+and improvement of postmortem debugging for Node.js. It seeks to
+elevate the role of postmortem debugging for Node, to assist in the
+development of techniques and tools, and to make techniques and tools
+known and available to Node.js users.</p>
+<p>Responsibilities include:</p>
+<ul>
+<li>Defining and adding interfaces/APIs in order to allow dumps
+to be generated when needed.</li>
+<li>Defining and adding common structures to the dumps generated
+in order to support tools that want to introspect those dumps.</li>
+</ul>
+<h3 id="header-release"><a href="https://github.com/nodejs/LTS">Release</a><a name="release" class="anchor" href="#release" aria-labelledby="header-release"></a></h3><p>The Release Working Group manages the release process for Node.js.</p>
+<p>Responsibilities include:</p>
+<ul>
+<li>Define the release process.</li>
+<li>Define the content of releases.</li>
+<li>Generate and create releases.</li>
+<li>Test Releases.</li>
+<li>Manage the Long Term Support and Current branches including
+backporting changes to these branches.</li>
+<li>Define the policy for what gets backported to release streams</li>
+</ul>
+<h3 id="header-security"><a href="https://github.com/nodejs/security-wg">Security</a><a name="security" class="anchor" href="#security" aria-labelledby="header-security"></a></h3><p>The Security Working Group manages all aspects and processes linked to Node.js security.</p>
+<p>Responsibilities include:</p>
+<ul>
+<li>Define and maintain security policies and procedures for:<ul>
+<li>the core Node.js project</li>
+<li>other projects maintained by the Node.js Technical Steering Committee (TSC).</li>
+</ul>
+</li>
+<li>Work with the Node Security Platform to bring community vulnerability data into
+the foundation as a shared asset.</li>
+<li>Ensure the vulnerability data is updated in an efficient and timely manner.
+For example, ensuring there are well-documented processes for reporting
+vulnerabilities in community modules.</li>
+<li>Review and recommend processes for handling of security reports (but not the
+actual administration of security reports, which are reviewed by a group of people
+directly delegated to by the TSC).</li>
+<li>Define and maintain policies and procedures for the coordination of security
+concerns within the external Node.js open source ecosystem.</li>
+<li>Offer help to npm package maintainers to fix high-impact security bugs.</li>
+<li>Maintain and make available data on disclosed security vulnerabilities in:<ul>
+<li>the core Node.js project</li>
+<li>other projects maintained by the Node.js Foundation technical group</li>
+<li>the external Node.js open source ecosystem</li>
+</ul>
+</li>
+<li>Promote the improvement of security practices within the Node.js ecosystem.</li>
+<li>Recommend security improvements for the core Node.js project.</li>
+<li>Facilitate and promote the expansion of a healthy security service and product
+provider ecosystem.</li>
+</ul>
+<h3 id="header-streams"><a href="https://github.com/nodejs/readable-stream">Streams</a><a name="streams" class="anchor" href="#streams" aria-labelledby="header-streams"></a></h3><p>The Streams Working Group is dedicated to the support and improvement of the
+Streams API as used in Node.js and the npm ecosystem. We seek to create a
+composable API that solves the problem of representing multiple occurrences
+of an event over time in a humane, low-overhead fashion. Improvements to the
+API will be driven by the needs of the ecosystem; interoperability and
+backwards compatibility with other solutions and prior versions are paramount
+in importance.</p>
+<p>Responsibilities include:</p>
+<ul>
+<li>Addressing stream issues on the Node.js issue tracker.</li>
+<li>Authoring and editing stream documentation within the Node.js project.</li>
+<li>Reviewing changes to stream subclasses within the Node.js project.</li>
+<li>Redirecting changes to streams from the Node.js project to this project.</li>
+<li>Assisting in the implementation of stream providers within Node.js.</li>
+<li>Recommending versions of <code>readable-stream</code> to be included in Node.js.</li>
+<li>Messaging about the future of streams to give the community advance notice of changes.</li>
+</ul>
+<h3 id="header-website"><a href="https://github.com/nodejs/nodejs.org">Website</a><a name="website" class="anchor" href="#website" aria-labelledby="header-website"></a></h3><p>The Website Working Group's purpose is to build and maintain a public
+website for the Node.js project.</p>
+<p>Responsibilities include:</p>
+<ul>
+<li>Developing and maintaining a build and automation system for nodejs.org.</li>
+<li>Ensuring the site is regularly updated with changes made to Node.js, like
+releases and features.</li>
+<li>Fostering and enabling a community of translators.</li>
+</ul>
+
+      </article>
+
+    </div>
+  </div>
+
+  <a href="#" id="scroll-to-top">↑ <span>Scroll to top</span></a>
+  
+  <footer role="contentinfo">
+  
+    <div class="container">
+      <div class="linuxfoundation-footer">
+        <div class="issue-link-container">
+          <a class="linuxfoundation-logo" href="http://collabprojects.linuxfoundation.org">
+            <img alt="Linux Foundation Collaborative Projects" src="/static/images/lfcp.png">
+          </a>
+          <ul class="list-divider-pipe issue-link">
+            <li><a href="https://github.com/nodejs/node/issues">Report Node.js issue</a></li>
+            <li><a href="https://github.com/nodejs/nodejs.org/issues">Report website issue</a></li>
+            <li><a href="https://github.com/nodejs/help/issues">Get Help</a></li>
+          </ul>
+        </div>
+  
+        <p>©  Node.js Foundation. All Rights Reserved. Portions of this site originally ©  Joyent. </p>
+        <p>Node.js is a trademark of Joyent, Inc. and is used with its permission. Please review the <a href="/static/documents/trademark-policy.pdf">Trademark Guidelines of the Node.js Foundation</a>.</p>
+        <p>Linux Foundation is a registered trademark of The Linux Foundation.</p>
+        <p>Linux is a registered <a href="http://www.linuxfoundation.org/programs/legal/trademark" title="Linux Mark Institute">trademark</a> of Linus Torvalds.</p>
+        <p>
+          <a href="https://raw.githubusercontent.com/nodejs/node/master/LICENSE">Node.js Project Licensing Information</a>.
+        </p>
+      </div>
+    </div>
+  
+  </footer>
+  
+  <link rel="stylesheet" href="/static/css/prism-tomorrow.css" media="all">
+  <script type="text/javascript">
+    var $scrollToTop = document.getElementById('scroll-to-top');
+    (window.onscroll = function() {
+      $scrollToTop.style.display = (window.pageYOffset > window.innerHeight) ? 'block' : 'none';
+    })();
+    $scrollToTop.onclick = function() {
+      window.scrollTo(0, 0);
+      return false;
+    };
+  </script>
+  
+  <script>
+    (function(d,e,m,s){
+      if (!/(MSIE|Trident)/.test(navigator.userAgent)){return;}
+      m=d.createElement(e);
+      s=d.getElementsByTagName(e)[0];m.async=1;m.src='/static/js/modernizr.custom.js';
+      m.onload=function(){Modernizr.addTest('flexboxtweener', Modernizr.testAllProps('flexAlign'));};
+      s.parentNode.insertBefore(m,s);
+    })(document,'script');
+  </script>
+  
+  <script src="/static/js/dnt_helper.js"></script>
+  <script>
+    (function(){
+      if (!_dntEnabled()) {
+        !function(n,o,d,e,j,s){n.GoogleAnalyticsObject=d;n[d]||(n[d]=function(){
+        (n[d].q=n[d].q||[]).push(arguments)});n[d].l=+new Date;j=o.createElement(e);
+        s=o.getElementsByTagName(e)[0];j.async=1;j.src='//www.google-analytics.com/analytics.js';
+        s.parentNode.insertBefore(j,s)}(window,document,'ga','script');
+  
+        if (!ga) return;
+  
+        ga('create', 'UA-67020396-1', 'auto');
+        ga('send', 'pageview');
+  
+        document.documentElement.addEventListener('click', function(e) {
+  
+          // Track case studies
+          if(!e.target || !e.target.dataset || !e.target.dataset.casestudy) return;
+          ga('send', 'event', {
+            eventCategory: 'casestudy',
+            eventAction: 'click',
+            eventLabel: e.target.dataset.casestudy,
+            eventValue: 0
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
